@@ -12,8 +12,40 @@ body{
 h1{
     text-align: center;
     background-color: #06283D;
+    font-size: 3rem;
     color: white;
     padding: 10px;
+}
+
+h2{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.draw-main{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.spacing{
+    margin: 5px;
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+    width: 80%;
+    height: 80%;
 }
 
 .download-clear{
@@ -25,8 +57,31 @@ h1{
     margin-right: 15%;
 }
 
+.options{
+    list-style: none;
+    margin: 0px;
+    margin-top: 20px;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.option:is(:hover,.active) :where(span,label){
+    color: #4A98EF;
+}
+
+
+.activeb{
+    color: #4A98EF;
+}
+
 a{
-    background-color: coral;
     color:  white;
     border: 2px solid black;
     text-decoration: none;
@@ -39,17 +94,21 @@ a{
 
 .pen-tools{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
+    /* justify-content: space-around; */
+    flex-direction: column;
+    /* align-items: center; */
+    width: 20%;
+    height: 560px;
     margin: auto;
-    margin-top: 10px;
+    margin-left: 25px;
+    margin-top: 0px;
+    padding: 20px;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
 }
 
 .fa-refresh{
     margin: 5px;
     margin-left: 10px;
-    background-color: coral;
     padding: 5px 10px;
     font-size: 1.2rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -63,43 +122,64 @@ a{
     flex-direction: column;
     text-align: center;
     font-size: 18px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px;
     margin-bottom: 5px;
+    color: white;
+}
+
+.btn{
+    background-color: white;
+    transition-duration: 0.4s;
+    color: black;
+    border: 2px solid green;
+}
+
+.btn:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #4CAF50; /* Green */
     color: white;
 }
 
 #favContainer{
     color: white;
     font-size: 18px;
-}
-
-.board{
-    width: 80%;
-    height: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin: auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-canvas{
-    margin: 20px;
+.eraser{
+    color: white;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    
+}
+
+.board{
+    flex: 1;
+}
+
+canvas{   
     border: 2px solid black;
     background-color: antiquewhite;
-    border-radius: 10px;
 }
 
 .drawing-colors{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     margin-bottom: 10px;
 }
 
 .color-circle{
     height: 20px;
     width: 20px;
-    border-radius: 50%;
+    border-radius: 10%;
     margin-left: 5px;
     border: 2px solid black;
     cursor: pointer;
@@ -107,32 +187,48 @@ canvas{
 
 .color-circle:nth-child(1){
     background-color: orange;
+    border: 1px solid white;
+
 }
 
 .color-circle:nth-child(2){
     background-color: yellow;
+    border: 1px solid white;
+
 }
 
 .color-circle:nth-child(3){
     background-color: blue;
+    border: 1px solid white;
 }
 
 .color-circle:nth-child(4){
     background-color: violet;
+    border: 1px solid white;
+
 }
 
 .color-circle:nth-child(5){
     background-color: red;
+    border: 1px solid white;
 }
 
 .color-circle:nth-child(6){
     background-color: green;
+    border: 1px solid white;
 }
 
 .color-circle:nth-child(7){
-    background-color: indigo;
+    background-color: black;
+    border: 1px solid white;
+}
+
+.color-circle:nth-child(8){
+    background-color: white;
+    border: 1px solid white;
 }
 
 .active{
     transform: scale(1.3);
 }
+
