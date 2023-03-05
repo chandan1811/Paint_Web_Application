@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Paint Application</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="favicon.ico">
+
+  </head>
+  <body>
+      <h1>Web Paint Application</h1>
+      <div id="pen-tools" class="pen-tools">
+          <div id="drawing-colors" class="drawing-colors">
+              <div class="color-circle active" data-color="orange" onclick="selectColor(this)"></div>
+              <div class="color-circle" data-color="yellow" onclick="selectColor(this)"></div>
+              <div class="color-circle" data-color="blue" onclick="selectColor(this)"></div>
+              <div class="color-circle" data-color="violet" onclick="selectColor(this)"></div>
+              <div class="color-circle" data-color="red" onclick="selectColor(this)"></div>
+              <div class="color-circle" data-color="green" onclick="selectColor(this)"></div>
+              <div class="color-circle" data-color="indigo" onclick="selectColor(this)"></div>
+            </div>
+            <div id="favContainer">
+                <label for="favcolor">Custom Color</label>
+                <input type="color" name="favColor" id="favColor" value="#ff0000" onchange="favColor(this)"/>
+            </div>
+        <div id="pen-size" class="pen-size">
+            <label for="pen-size">Pen Size</label>
+            <input type="range" name="pen-size" value="3" step="3" min="3" max="30" id="pen-size" onchange="penSizeChange(this.value)"/>
+        </div>
+    </div>
+    
+    <div class="board">
+        <canvas width="1000%" height="540%"></canvas>
+        <div class="download-clear">
+            <a href="" download="my_painting.png">Download Painting</a>
+            <button class="fa-refresh"><strong>Clear</strong></button>
+        </div>
+    </div>
+        <script src="index.js"></script>
+</body>
+</html>
