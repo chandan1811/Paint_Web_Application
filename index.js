@@ -11,11 +11,12 @@ let selectTool = "brush";
 var canvas = document.querySelector("canvas");
 c = canvas.getContext("2d");
 
-
-// window.addEventListener("load",()=>{
-//     canvas.width=canvas.offsetWidth;
-//     canvas.height=canvas.offsetHeight;
-// });
+// this is used to adjust rhe height and width of canvas with respect to screen
+// the media queries should be written along with this inorder to make it responsive
+window.addEventListener("load",()=>{
+    canvas.width=canvas.offsetWidth;
+    canvas.height=canvas.offsetHeight;
+});
 
 // code for drawing
 canvas.addEventListener("mousedown",(e)=>{

@@ -15,13 +15,13 @@
             <div class="draw-main">
                 <h2>Select Color</h2>
                 <div id="drawing-colors" class="drawing-colors">
-                    <div class="color-circle active" data-color="orange" onclick="selectColor(this)"></div>
+                    <div class="color-circle active" data-color="black" onclick="selectColor(this)"></div>
+                    <div class="color-circle" data-color="orange" onclick="selectColor(this)"></div>
                     <div class="color-circle" data-color="yellow" onclick="selectColor(this)"></div>
                     <div class="color-circle" data-color="blue" onclick="selectColor(this)"></div>
                     <div class="color-circle" data-color="violet" onclick="selectColor(this)"></div>
                     <div class="color-circle" data-color="red" onclick="selectColor(this)"></div>
                     <div class="color-circle" data-color="green" onclick="selectColor(this)"></div>
-                    <div class="color-circle" data-color="black" onclick="selectColor(this)"></div>
                     <div class="color-circle" data-color="white" onclick="selectColor(this)"></div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
             </div>
 
             <ul class="options">
-                <h2>Options</h2>
+                <h2 class="optionh2">Options</h2>
                 <li class="option activeb" id="brush" onclick="changeactive(this)"><span>Brush</span></li>
                 <li class="option" id="eraser" onclick="changeactive(this)"><span>Eraser</span></li>
                 <input type="range" name="pen-size" value="3" min="3" max="30" id="size-slider" onchange="penSizeChange(this.value)"/>
